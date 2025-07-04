@@ -33,36 +33,63 @@ This is the core functionality, using the `hybrid_HFPSO.py` script to apply encr
 ```python
 img_name = "lena"
 ```
+3. Run the script from your terminal:
+
+```bash
+python hybrid_HFPSO.py
+```
 ## 📤 Expected Output
 
 After running the `hybrid_HFPSO.py` script, the following outputs will be generated:
-
-### 🖼️ Output Images
-
 - **Encrypted Image**  
-  Saved at:```bash
+  Saved at:```
 images/{img_name}_encrypted_hfpso.png```
 - **Decrypted Image**  
-Saved at:```bash
+Saved at:```
 images/{img_name}_decrypted_hfpso.png```
 > Replace `{img_name}` with the actual image name you specified (e.g., `lena`, `pepper`).
 
 ---
+## 📊 Analyze Encryption Performance
 
-### 🧾 Console Output
+The `test_result.py` script calculates various **security** and **image quality** metrics to evaluate the performance of the encryption scheme.
 
-The terminal/console will display a series of outputs including:
+---
 
-- **HFPSO Optimization Progress**
-- Iteration-wise fitness values
-- Key generation and convergence status
+### 🧪 How to Run
 
-- **Image Quality & Security Metrics**
-- **Correlation Coefficients** (between adjacent pixels)
-- **PSNR** (Peak Signal-to-Noise Ratio)
-- **MSE** (Mean Squared Error)
-- **Entropy** (information randomness)
-- **UACI** (Unified Average Changing Intensity)
-- **NPCR** (Number of Pixels Change Rate), if implemented
+1. Open the `test_result.py` script in your code editor.
+2. Set the `img_name` variable to the name of the image you want to analyze (without file extension). For example:
 
-- **Decryption Status Message**
+```python
+# In test_result.py
+img_name = "pepper"
+```
+3.Execute the script using the terminal:
+
+```bash
+python test_result.py
+```
+## Expected Output
+
+### 📊 Combined Histogram Plot
+- A combined histogram plot showing the **original** and **encrypted** image histograms.
+- Saved as:
+```images/{img_name}_combined_histogram.png```
+---
+
+### 🖥️ Console Output
+
+#### 🔗 Correlation Coefficients
+
+#### 📈 Entropy  -Displays the entropy of the image to measure randomness
+
+#### 🧮 Mean Squared Error (MSE)   -Measures the average of the squares of the differences between original and processed images
+
+#### 🔄 Number of Pixels Change Rate (NPCR)   - Indicates how many pixel values have changed between original and encrypted images
+
+#### 📊 Unified Average Changing Intensity (UACI)  - Measures the average intensity difference between the original and encrypted images
+
+#### 🔉 Peak Signal-to-Noise Ratio (PSNR)
+
+#### 🧠 Structural Similarity Index (SSIM)  - Quantifies the similarity between original and processed images.
