@@ -1,4 +1,4 @@
-# Image Encryption and Decryption Project
+# Image Encryption and Decryption using Hybrid nature inspired optimization Project
 
 This project implements an image encryption and decryption scheme using a hybrid Firefly and Particle Swarm Optimization (HFPSO) algorithm to find optimal encryption keys. It also includes scripts for analyzing the security of the encryption against common attacks like cropping and Gaussian noise, and for evaluating various image quality and security metrics.
 ### Prerequisites
